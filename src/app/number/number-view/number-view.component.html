@@ -1,0 +1,11 @@
+<mat-dialog-content class="mat-typography">
+  <h2>Use search feature in your browser to find your number easier</h2>
+  <h3 *ngFor="let numbers of numberText">
+    {{ numbers }}
+  </h3>
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="{ sequence:data.sequence, exist: false }">not exist</button>
+  <button mat-button [mat-dialog-close]="{ sequence:data.sequence, exist: true }">exist</button>
+</div>
